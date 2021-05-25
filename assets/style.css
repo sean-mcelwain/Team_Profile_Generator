@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsl(206, 17%, 28%);
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+
+}
+.card-header {
+    background-color: rgb(232, 71, 86);
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-item{
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  
+}
+
+.card-item h1{
+  background-color:rgb(0, 119, 247);
+  color: white;
+  padding: 7px;
+}
+.card-item p{
+  padding: 7px;
+}
+
