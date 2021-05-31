@@ -35,7 +35,7 @@ inquirer.prompt([
   {
     name: "employee00_name",
     type: "input",
-    message: "Team Manager's Name:",
+    message: "Employee's Name:",
   },
   {
     name: "employee00_ID",
@@ -50,7 +50,7 @@ inquirer.prompt([
   {
     name: "employee00_github",
     type: "input",
-    message: "Employee's Office Number:",
+    message: "Employee's GitHub Username:",
   },
 
   {
@@ -62,7 +62,7 @@ inquirer.prompt([
   {
     name: "employee01_name",
     type: "input",
-    message: "Team Manager's Name:",
+    message: "Employee's Name:",
   },
   {
     name: "employee01_ID",
@@ -77,7 +77,7 @@ inquirer.prompt([
   {
     name: "employee01_github",
     type: "input",
-    message: "Employee's Office Number:",
+    message: "Employee's GitHub Username:",
   },
     {
     name: "employee02_profession",
@@ -88,7 +88,7 @@ inquirer.prompt([
   {
     name: "employee02_name",
     type: "input",
-    message: "Team Manager's Name:",
+    message: "Employee's Name:",
   },
   {
     name: "employee02_ID",
@@ -103,7 +103,7 @@ inquirer.prompt([
   {
     name: "employee02_github",
     type: "input",
-    message: "Employee's Office Number:",
+    message: "Employee's GitHub Username:",
   },
   {
     name: "employee03_profession",
@@ -114,7 +114,7 @@ inquirer.prompt([
   {
     name: "employee03_name",
     type: "input",
-    message: "Team Manager's Name:",
+    message: "Employee's Name:",
   },
   {
     name: "employee03_ID",
@@ -129,7 +129,33 @@ inquirer.prompt([
   {
     name: "employee03_github",
     type: "input",
-    message: "Employee's Office Number:",
+    message: "Employee's GitHub Username:",
+  },
+  {
+    name: "employee04_profession",
+    type: "rawlist",
+    message: "To Add Another Team Member, Select from the Choices Below:",
+    choices: ['Engineer', 'Intern'],
+  },
+  {
+    name: "employee04_name",
+    type: "input",
+    message: "Employee's Name:",
+  },
+  {
+    name: "employee04_ID",
+    type: "input",
+    message: "Employee's ID Number:",
+  },
+  {
+    name: "employee04_email",
+    type: "input",
+    message: "Employee's Email Address:",
+  },
+  {
+    name: "employee04_github",
+    type: "input",
+    message: "Employee's GitHub Username:",
   },
 
   
@@ -139,7 +165,7 @@ inquirer.prompt([
 
     const managerName = answer.manager_name;
     const managerID = answer.manager_ID;
-    const managerEmail = answer.manager_email;
+    const managerEmail = "<a href='mailto:" + answer.manager_email + "'>" + answer.manager_email + "</a>";
     const managerOfficeNo = answer.manager_office;
 
     const managerCard = "<div class='card-item'> \n"
@@ -153,8 +179,8 @@ inquirer.prompt([
 
     const employee00Name = answer.employee00_name;
     const employee00ID = answer.employee00_ID;
-    const employee00Email = answer.employee00_email;
-    const employee00GitHub = answer.employee00_github;
+    const employee00Email = "<a href='mailto:" + answer.employee00_email + "'>" + answer.employee00_email + "</a>";
+    const employee00GitHub = "<a href='https://github.com/" + answer.employee00_github + "'>" + answer.employee00_github + "</a>";
     const employee00Profession = answer.employee00_profession;
 
     const employee00Card = "<div class='card-item'> \n"
@@ -162,14 +188,14 @@ inquirer.prompt([
                           + "<div class='card-item-body'> \n"
                             + "<div class='card-item-p'>ID: " + employee00ID + "</div> \n"
                             + "<div class='card-item-p'>Email: " + employee00Email + "</div> \n"
-                            + "<div class='card-item-p'>GitHub: " + employee00GitHub + "</div> \n"
+                            + "<div class='card-item-p'>GitHub Profile: "  + employee00GitHub + "</div> \n"
                           + "</div> \n"
                           + "</div> \n";
     
     const employee01Name = answer.employee01_name;
     const employee01ID = answer.employee01_ID;
-    const employee01Email = answer.employee01_email;
-    const employee01GitHub = answer.employee01_github;
+    const employee01Email = "<a href='mailto:" + answer.employee01_email + "'>" + answer.employee01_email + "</a>";
+    const employee01GitHub = "<a href='https://github.com/" + answer.employee01_github + "'>" + answer.employee01_github + "</a>";
     const employee01Profession = answer.employee01_profession;
                 
     const employee01Card = "<div class='card-item'> \n"
@@ -177,14 +203,14 @@ inquirer.prompt([
                           + "<div class='card-item-body'> \n"
                             + "<div class='card-item-p'>ID: " + employee01ID + "</div> \n"
                             + "<div class='card-item-p'>Email: " + employee01Email + "</div> \n"
-                            + "<div class='card-item-p'>GitHub: " + employee01GitHub + "</div> \n"
+                            + "<div class='card-item-p'>GitHub Profile: " + employee01GitHub + "</div> \n"
                           + "</div> \n"
                           + "</div> \n";
 
     const employee02Name = answer.employee02_name;
     const employee02ID = answer.employee02_ID;
-    const employee02Email = answer.employee02_email;
-    const employee02GitHub = answer.employee02_github;
+    const employee02Email = "<a href='mailto:" + answer.employee02_email + "'>" + answer.employee02_email + "</a>";
+    const employee02GitHub = "<a href='https://github.com/" + answer.employee02_github + "'>" + answer.employee02_github + "</a>";
     const employee02Profession = answer.employee02_profession;
                 
     const employee02Card = "<div class='card-item'> \n"
@@ -192,15 +218,15 @@ inquirer.prompt([
                           + "<div class='card-item-body'> \n"
                             + "<div class='card-item-p'>ID: " + employee02ID + "</div> \n"
                             + "<div class='card-item-p'>Email: " + employee02Email + "</div> \n"
-                            + "<div class='card-item-p'>GitHub: " + employee02GitHub + "</div> \n"
+                            + "<div class='card-item-p'>GitHub Profile: " + employee02GitHub + "</div> \n"
                           + "</div> \n"
                           + "</div> \n";
 
 
     const employee03Name = answer.employee03_name;
     const employee03ID = answer.employee03_ID;
-    const employee03Email = answer.employee03_email;
-    const employee03GitHub = answer.employee03_github;
+    const employee03Email = "<a href='mailto:" + answer.employee03_email + "'>" + answer.employee03_email + "</a>";
+    const employee03GitHub = "<a href='https://github.com/" + answer.employee03_github + "'>" + answer.employee03_github + "</a>";
     const employee03Profession = answer.employee03_profession;
                 
     const employee03Card = "<div class='card-item'> \n"
@@ -208,7 +234,21 @@ inquirer.prompt([
                           + "<div class='card-item-body'> \n"
                             + "<div class='card-item-p'>ID: " + employee03ID + "</div> \n"
                             + "<div class='card-item-p'>Email: " + employee03Email + "</div> \n"
-                            + "<div class='card-item-p'>GitHub: " + employee03GitHub + "</div> \n"
+                            + "<div class='card-item-p'>GitHub Profile: " + employee03GitHub + "</div> \n"
+                          + "</div> \n"
+                          + "</div> \n";
+    const employee04Name = answer.employee04_name;
+    const employee04ID = answer.employee04_ID;
+    const employee04Email = "<a href='mailto:" + answer.employee04_email + "'>" + answer.employee04_email + "</a>";
+    const employee04GitHub = "<a href='https://github.com/" + answer.employee04_github + "'>" + answer.employee04_github + "</a>";
+    const employee04Profession = answer.employee04_profession;
+                
+    const employee04Card = "<div class='card-item'> \n"
+                          + "<div class='card-item-heading'>" + employee04Name + "<br>" + employee04Profession +"</div> \n"
+                          + "<div class='card-item-body'> \n"
+                            + "<div class='card-item-p'>ID: " + employee04ID + "</div> \n"
+                            + "<div class='card-item-p'>Email: " + employee04Email + "</div> \n"
+                            + "<div class='card-item-p'>GitHub Profile: " + employee04GitHub + "</div> \n"
                           + "</div> \n"
                           + "</div> \n";
 
@@ -248,6 +288,7 @@ const html = "<!DOCTYPE html>\n"
                         + employee01Card
                         + employee02Card
                         + employee03Card
+                        + employee04Card
 
 
                       + "</div> \n"
