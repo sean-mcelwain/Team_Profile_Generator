@@ -4,7 +4,8 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Starts inquirer to prompt the user for input data
-inquirer.prompt([
+
+const inquirerQuestions = [
   {
     name: "manager_name",
     type: "input",
@@ -159,8 +160,9 @@ inquirer.prompt([
   },
 
   
-  ])
+  ];
 
+  inquirer.prompt(inquirerQuestions)
   .then((answer) => {
 
     const managerName = answer.manager_name;
