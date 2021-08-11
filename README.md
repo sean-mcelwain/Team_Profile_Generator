@@ -40,4 +40,4 @@ For any question regarding this project, my preferred method of communication is
 
 <a name='screenshot'></a>
  ## Screenshot 
-![Screenshot](https://)
+![Screenshot](https://raw.githubusercontent.com/sean-mcelwain/Team_Profile_Generator/main/screenshot.jpg)
