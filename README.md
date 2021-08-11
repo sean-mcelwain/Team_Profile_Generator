@@ -3,6 +3,8 @@
  ## Description 
 This application utilizes command-line (node.js based) javascript, specifically node's file system and inquirer packages, to collect user input about the user's work team and then uses that data to generate an HTML file where the user can view the entire team's credentials. 
 
+## Demo Video Link
+URL: https://youtu.be/5Uez0RRhYD8
 
 ## Table of Contents  
  1. [ Description. ](#description)  

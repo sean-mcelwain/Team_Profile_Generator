@@ -47,7 +47,7 @@ function generateManagerCard(event) {
               <div class='card-item-heading'>${name}<br>${role}</div> \n
               <div class='card-item-body'> \n
                 <div class='card-item-p'>ID: ${id}</div> \n
-				<div class='card-item-p'>Email: ${email}</div> \n
+				<div class='card-item-p'>Email: <a href='mailto:${email}'>${email}</a></div> \n
 				<div class='card-item-p'>Office Number: ${office}</div> \n
 			  </div> \n
 			</div> \n
@@ -60,14 +60,15 @@ function generateEngineerCard(event) {
 	let role = engineer.getRole();
 	let id = engineer.getId();
 	let email = engineer.getEmail();
-	let github = engineer.getGitHub();
+	let githubURL = engineer.getGitHub();
+	let github = engineer.github;
 
 	return `<div class='card-item'> \n
               <div class='card-item-heading'>${name}<br>${role}</div> \n
               <div class='card-item-body'> \n
                 <div class='card-item-p'>ID: ${id}</div> \n
-				<div class='card-item-p'>Email: ${email}</div> \n
-				<div class='card-item-p'>GitHub Profile: ${github}</div> \n
+				<div class='card-item-p'>Email: <a href='mailto:${email}'>${email}</a></div> \n
+				<div class='card-item-p'>GitHub Profile: <a href='${githubURL}'>${github}</a></div> \n
 			  </div> \n
 			</div> \n
  `;
@@ -85,7 +86,7 @@ function generateInternCard(event) {
               <div class='card-item-heading'>${name}<br>${role}</div> \n
               <div class='card-item-body'> \n
                 <div class='card-item-p'>ID: ${id}</div> \n
-				<div class='card-item-p'>Email: ${email}</div> \n
+				<div class='card-item-p'>Email: <a href='mailto:${email}'>${email}</a></div> \n
 				<div class='card-item-p'>School: ${school}</div> \n
 		      </div> \n
             </div> \n
